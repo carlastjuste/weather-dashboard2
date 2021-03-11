@@ -1,38 +1,122 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+header {
+  background: #353839;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: x-large;
+  font-family: "Comic Sans MS", "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+aside {
+  background-color: #f8f8f8;
+  width: 30%;
+  float: left;
+}
+
+aside .searchBlock {
+  margin: 20px;
+}
+
+main {
+  width: 70%;
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Style for Uv index value */
+
+.yellow span {
+  background-color: yellow;
+}
+
+.green span {
+  background-color: lime;
+  padding: 0px 20px 0px 0px;
+  border-radius: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.red span {
+  background-color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style for current-weater-display section */
+#current-weather-display {
+  margin: 20px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#current-weather-display h1 {
+  margin: 45px 0px 0px 45px;
+  float: left;
+}
+
+#current-weather-display img {
+  margin: 0px;
+  float: left;
+}
+
+#current-weather-display ul {
+  clear: both;
+  margin: 45px 0px 0px 45px;
+}
+
+#current-weather-display ul li {
+  margin-bottom: 20px;
+}
+
+/* style for forecast section */
+#forecast {
+  margin: 20px;
+}
+
+#forecast ul {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#forecast ul li {
+  background-color: cornflowerblue;
+  padding: 20px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+}
+
+/* style for search history */
+
+#searchHistory {
+  display: flex;
+  flex-flow: column wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+#searchHistory li {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #c0c0c0;
+  text-decoration: none;
+  background-color: whitesmoke;
+  color: #787878;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
+  color: #787878;
 }
