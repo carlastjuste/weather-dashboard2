@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import React, { Component } from 'react';
 import Header from './components/header';
+import Weather from './components/weather';
 import CurrentWeather from './components/currentWeather';
 import Forecast from './components/forecast';
 import SearchCity from './components/seachCity';
@@ -22,8 +23,9 @@ class App extends Component {
       </aside>
 
       <main>
-        <CurrentWeather />
-        <Forecast />
+        {/* <CurrentWeather />
+        <Forecast /> */}
+        <Weather />
       </main>
     </React.Fragment>
 
