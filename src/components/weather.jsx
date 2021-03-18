@@ -31,8 +31,8 @@ class weather extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <CurrentWeather currentWeatherData={this.state.currentWeather} searchCity= {this.state.searchCity} />
-                <Forecast forecastData={this.state.forecast}/>
+                <CurrentWeather currentWeatherData={this.state.currentWeather} searchCity= {this.state.searchCity} unitTemp={this.state.unitTemp} />
+                <Forecast forecastData={this.state.forecast} unitTemp={this.state.unitTemp} unitWind={this.state.unitWind}/>
             </React.Fragment>
          );
     }

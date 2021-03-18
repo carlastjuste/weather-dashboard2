@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { Component } from 'react';
 import API from "../utils/API";
+import CurrentWeather from "./currentWeather";
 
 class SearchCity extends Component{
     state = {
@@ -36,8 +37,6 @@ class SearchCity extends Component{
         });
     }
 
-
-
     handleSubmitSearch = e => {
         e.preventDefault();
         this.getWeatherInfo(this.state.searchValue);
@@ -53,8 +52,11 @@ class SearchCity extends Component{
     }
 
     render(){
+
+        //console.log('props', this.props);
+
         return ( 
-    
+    <React.Fragment>  
             <div className='searchBlock'>
                 <form onSubmit={this.handleSubmitSearch}>
                     <label htmlFor="search-weather"></label>
@@ -69,10 +71,12 @@ class SearchCity extends Component{
                     <small className="form-text text-muted">Search current weather and 5 days forecast by City Name, US State or Country</small>
                     <button id="searchWeatherBtn" type="submit" className="btn btn-primary mt-3">Search</button>
                 </form>
-            </div>       
+            </div>  
+    </React.Fragment>
+
     
     );
-        
+    <CurrentWeather data={this.state.current} /> 
     }
 
 }

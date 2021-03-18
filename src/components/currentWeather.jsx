@@ -3,10 +3,6 @@ import SearchCity from "./seachCity";
 import API from "../utils/API";
 
 class  CurrentWeather extends Component {
-    state = {
-        unitTemp:"F",
-        unitWind:" MPH",
-      };
 
       getCurrentDate = (timeStamp) =>{
         var curDate= new Date (parseInt(timeStamp) * 1000);
@@ -35,9 +31,9 @@ class  CurrentWeather extends Component {
                {this.props.currentWeatherData.weather && <img src={"http://openweathermap.org/img/wn/"+this.props.currentWeatherData.weather[0].icon+"@2x.png"} 
                alt={this.props.currentWeatherData.weather[0].description} />}
                <ul>
-                 <li>Temperature: {this.props.currentWeatherData.temp} &deg;{this.state.unitTemp}</li>
+                 <li>Temperature: {this.props.currentWeatherData.temp} &deg;{this.props.unitTemp}</li>
                  <li>Humidity: {this.props.currentWeatherData.humidity}<span> %</span></li>
-                 <li>Wind Speed: {this.props.currentWeatherData.wind_speed}{this.state.unitWind}</li>
+                 <li>Wind Speed: {this.props.currentWeatherData.wind_speed}{this.props.unitWind}</li>
                  <li className={uvIndexcolor}>UV Index: <span>{this.props.currentWeatherData.uvi}</span></li>
               </ul>
             </section>

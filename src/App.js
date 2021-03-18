@@ -23,8 +23,6 @@ class App extends Component {
       </aside>
 
       <main>
-        {/* <CurrentWeather />
-        <Forecast /> */}
         <Weather />
       </main>
     </React.Fragment>
