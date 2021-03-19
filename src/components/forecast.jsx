@@ -20,6 +20,7 @@ class Forecast extends Component {
             let datefMonth = datef.getMonth() + 1; 
             let forcastDate = datefMonth + "/" + datef.getDate() + "/" + datef.getFullYear();      
             forecast.push({Date: forcastDate, temperature: temperature, humidity: humidity, iconUrl: weatherIconUrl, iconDesc: weatherIconDesc});
+            console.log(forecast);
             }
            });
             
@@ -29,8 +30,9 @@ class Forecast extends Component {
                 <section id="forecast">
                   <h2>5-Days Forecast:</h2>
                   <ul className='Forecast'>
-                   {forecast.map(element => 
-                   <li>
+                   {forecast.map((element, elementIndex) => 
+                  
+                   <li key ={elementIndex} >
                        <h3>{element.Date}</h3>
                     <img src={element.iconUrl} alt={element.iconDesc} />
                     <p>Temp: {element.temperature}&deg;{this.props.unitTemp}</p><br/>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SearchCity from "./seachCity";
 import API from "../utils/API";
 
 class  CurrentWeather extends Component {
