@@ -46,6 +46,7 @@ class SearchHistory extends Component {
         }
 
         if(previousSearch.length != 0) {
+            
 
         }
 
