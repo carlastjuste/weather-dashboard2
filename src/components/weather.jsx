@@ -21,9 +21,9 @@ class weather extends Component {
 
 
    async componentDidMount() {
-    let searchCity = [{'name': '', 'lat': '', 'lon':''}];
-    localStorage.setItem('searchCity', JSON.stringify(searchCity));
-        this.getWeatherInfo();
+    // let searchCity = [{'name': '', 'lat': '', 'lon':''}];
+    // localStorage.setItem('searchCity', JSON.stringify(searchCity));
+       this.getWeatherInfo();
   }
 
   getWeather = (city, current, forecast) => {
