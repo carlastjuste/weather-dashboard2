@@ -12,7 +12,7 @@ The following image demonstrates the application functionality:
 [WeatherDashboard](https://weather-dashboard2.herokuapp.com/)
 
 ## API Info
-[OpenWeather API](https://openweathermap.org/api)  is used to retreive data for city, US State or Country.
+[OpenWeather API](https://openweathermap.org/api)  is used to retrieve data for cities, US States or Countries.
 
 ## Prerequisites
 This software can be used on :
